@@ -1,1 +1,1 @@
-import getLevel from './level';
+import { getLevel } from './level';
