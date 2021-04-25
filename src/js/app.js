@@ -1,1 +1,1 @@
-
+import getLevel from './level';
