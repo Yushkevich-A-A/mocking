@@ -16,10 +16,10 @@ test('call loadUserLevel with successful', () => {
 });
 
 test('call loadUserLevel with empty result', () => {
-  fetchData.mockReturnValue({});
+  fetchData.mockReturnValue({ status: 'ok', level: 80 });
 
   const result = getLevel(1);
-  expect(result).toEqual('Информация об уровне временно недоступна');
+  expect(result).not.toBe('Информация об уровне временно недоступна');
   expect(fetchData).not.toBeCalledWith('https://server/user/2');
 });
 
